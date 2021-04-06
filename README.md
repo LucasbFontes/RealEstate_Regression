@@ -20,15 +20,19 @@ This dataset has 414 rows and 7 columns:
 - **longitude** - the geographic coordinate, longitude
 - **price_per_unit** house price of unit area (3.3 square meters)
 
+In this case our variable to be predicted will be price_per_unit
+
 
 # The Project
 
 This project focus on trying to predict the Real Estate values from a certain city. I used 4 regression techniques: 
 
- - Linear Regression:
- - Ridge Regression:
+ - Linear Regression: It's an equation that estimates a variable (in this case price_per_unit) based on others variables. This equation is found when we plot the data into a scatterplot and try to plot the best list throught the data. The plot has to be a straight line, otherwise it won't be linear.
+ - Ridge Regression: A Linear Regression variant 
  - Lasso Regression:
  - Random Forest Regression:
+
+![linear_regression](https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fterm%2Fregression-analysis%2F239043%2F&psig=AOvVaw2q4mV_iZdaQkhFmJ5F8kYM&ust=1617795238711000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjFo4_D6e8CFQAAAAAdAAAAABAD)
 
 And other 3 metrics to validate the techniques:
 
