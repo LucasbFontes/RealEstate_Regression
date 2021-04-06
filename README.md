@@ -20,7 +20,7 @@ This dataset has 414 rows and 7 columns:
 - **longitude** - the geographic coordinate, longitude
 - **price_per_unit** house price of unit area (3.3 square meters)
 
-In this case our variable to be predicted will be price_per_unit
+In this case our variable to be predicted will be price_per_unit.
 
 
 # The Project
@@ -28,14 +28,20 @@ In this case our variable to be predicted will be price_per_unit
 This project focus on trying to predict the Real Estate values from a certain city. I used 4 regression techniques: 
 
  - Linear Regression: It's an equation that estimates a variable (in this case price_per_unit) based on others variables. This equation is found when we plot the data into a scatterplot and try to plot the best list throught the data. The plot has to be a straight line, otherwise it won't be linear.
- - Ridge Regression: A Linear Regression variant 
- - Lasso Regression:
- - Random Forest Regression:
+ - SVR: The **S**upport **V**ector **R**egression uses the principle of Support Vector Machine to predict value through regression. It's main difference when compared to "simple regressions" is that although a simple regression focus on minimize the MSE(I'll take about it below) the SVM focus on fit the error within a threshold.   
+ - Random Forest Regression: It works as multiples Decisions Trees, in each decision tree the algorithm selects, randomly, some features of our dataset and then separate the data following the decision tree logic. By the end of this logic, one DT provides one value as answer. After all decision trees had provide an answer of it's own, the final answer comes as a mean value of all others answers. 
 
-![linear_regression](https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fterm%2Fregression-analysis%2F239043%2F&psig=AOvVaw2q4mV_iZdaQkhFmJ5F8kYM&ust=1617795238711000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjFo4_D6e8CFQAAAAAdAAAAABAD)
 
 And other 3 metrics to validate the techniques:
 
- - MSE:
- - RMSE:
- - R2:
+ - MSE: **M**ean **S**quared **E**rror measures of the squares of the erros, which means that we take the average squared difference between the estimated value and the actual value. 
+ - RMSE: The **R**oot **M**ean **S**quared **E**rror corresponds to the square root of the MSE, a value of 0 indicates a perfect fit. 
+ - R2: Indicates how close the data are from the adjusted regression line.
+
+After trained the data with the 3 algorithms listed above, I chose to proceed with Random Forest, when compared with the others RF gave me the best MSE and, therefore, better RMSE, the R2 had a good result as well. 
+
+# Hyperparameter Optimization
+
+This technique is based on improve the parameters of a given function, the best approach is to study the parameters of a given function and understand it's impact.  
+
+ 
