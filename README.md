@@ -42,6 +42,10 @@ After trained the data with the 3 algorithms listed above, I chose to proceed wi
 
 # Hyperparameter Optimization
 
-This technique is based on improve the parameters of a given function, the best approach is to study the parameters of a given function and understand it's impact.  
+This technique is based on improving the parameters of a given function, the best approach is to study the functions parameters and understand their impact. After that, it is recommended to create a dictionary containing the chosen parameters and the values you want to check. To proceed with the optimization it is commom to use a function called **GridSearchCV** that take all the parameters defined in the dictionary and test all kind of possible combinations among them, e.g., if I have created a dictionary containing 3 parameters and each of them has 3 differentes values, I'll have 3x3x3=27 different combinations, GridSearchCV will return the combinations that perform better given the metrics defined earlier(in this case: MSE, RMSE e R2).
 
+As well as every technique GridSearchCV has it's disadvantages, for example the time spent to test all possibilites. In this project I used only 3 parameters because it was a 
+personal project, to test my knowledge, but in a real project it will be as much parameters as necessary, which obviously will increase exponentially the time to choose the best parameters combination. 
+
+To avoid this disadvantage is possible to use RandomSearchCV
  
