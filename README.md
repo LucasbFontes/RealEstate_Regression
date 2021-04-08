@@ -35,7 +35,9 @@ To make it simple and short I'll show only one feature of each kind:
 This chart show us 2 important informations: the correlation value and the p-value. The first show how our 2 axis are related, and in this case -0,70 indicates a highly negative correlation, which means that when I increase the transit_distance the price decreases(and it makes sense, right?). The p-value is the probability to observe a statiscal test at least as extrem as the observed value. Since our p-value is less than 0,01 we have strong evidence.
 
 Now for the non-categorical data
+
 ![bh](https://user-images.githubusercontent.com/68716835/113953822-09a94c00-97ef-11eb-8de9-d36e407ab9ef.PNG)
+
 
 It's clearly that there's no correlation between price_per_unit and transaction_date, the boxplots flutuates along the X-axis. Therefore this feature won't be considered when training the algorithm.
 
