@@ -22,8 +22,24 @@ This dataset has 414 rows and 7 columns:
 
 In this case our variable to be predicted will be price_per_unit.
 
+## Finding Correlations
 
-# The Project
+One step in machine learning projects is to find the correlation between our resources and the label, mainly because it helps us to see that there is some relationship between them. If so, we can use it in our project, otherwise, it will be necessary to delete it. 
+
+Since we have two kind of features: non-categorical and categorical, I'm going to divide in two different visualizations, for non-categorical data I'll use scatterplot and for categorical the boxplot.
+
+To make it simple and short I'll show only one feature of each kind:
+
+![correaltion](https://user-images.githubusercontent.com/68716835/113952772-bc2bdf80-97ec-11eb-9ce0-f84bb2ee88aa.PNG)
+
+This chart show us 2 important informations: the correlation value and the p-value. The first show how our 2 axis are related, and in this case -0,70 indicates a highly negative correlation, which means that when I increase the transit_distance the price decreases(and it makes sense, right?). The p-value is the probability to observe a statiscal test at least as extrem as the observed value. Since our p-value is less than 0,01 we have strong evidence.
+
+Now for the non-categorical data
+![bh](https://user-images.githubusercontent.com/68716835/113953822-09a94c00-97ef-11eb-8de9-d36e407ab9ef.PNG)
+
+It's clearly that there's no correlation between price_per_unit and transaction_date, the boxplots flutuates along the X-axis. Therefore this feature won't be considered when training the algorithm.
+
+# Machine Learning Algorithms
 
 This project focus on trying to predict the Real Estate values from a certain city. I used 4 regression techniques: 
 
@@ -47,5 +63,7 @@ This technique is based on improving the parameters of a given function, the bes
 As well as every technique GridSearchCV has it's disadvantages, for example the time spent to test all possibilites. In this project I used only 3 parameters because it was a 
 personal project, to test my knowledge, but in a real project it will be as much parameters as necessary, which obviously will increase exponentially the time to choose the best parameters combination. 
 
-To avoid this disadvantage is possible to use RandomSearchCV
+To avoid this disadvantage is possible to use **RandomSearchCV**, which instead of test all of the possible combinations, selects randomly the parameters in the dictionary and test them.
  
+
+
