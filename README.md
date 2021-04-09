@@ -65,7 +65,15 @@ This technique is based on improving the parameters of a given function, the bes
 As well as every technique GridSearchCV has it's disadvantages, for example the time spent to test all possibilites. In this project I used only 3 parameters because it was a 
 personal project, to test my knowledge, but in a real project it will be as much parameters as necessary, which obviously will increase exponentially the time to choose the best parameters combination. 
 
-To avoid this disadvantage is possible to use **RandomSearchCV**, which instead of test all of the possible combinations, selects randomly the parameters in the dictionary and test them.
- 
+To avoid this disadvantage is possible to use **RandomSearchCV**, which instead of test all of the possible combinations, selects randomly the parameters in the dictionary and test them. 
 
+Below you can check the train model, before(left image) and after(right image), hyperparametrization:
+
+
+![image](https://user-images.githubusercontent.com/68716835/114112643-26a75300-98b3-11eb-8e3c-7413f7703a62.png) ![image](https://user-images.githubusercontent.com/68716835/114112665-32931500-98b3-11eb-83c0-0b66d39a7414.png)
+     
+
+# Conclusion
+
+This readme focused on showing some data analysis as well as machine learning techniques.The aim here is to present only a scracth from these techniques and concepts, to improve your learning I recommend check on youtube channels, medium posts and kaggle courses.
 
